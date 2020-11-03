@@ -1,0 +1,44 @@
+.btn-md {
+  height: 45px;
+}
+
+.btn-pad-60 {
+  padding: 8px 60px !important;
+}
+
+.sidebar-none {
+  display: none !important;
+}
+
+.drawer-none {
+  width: 0 !important;
+}
+
+.login-layout .box-none {
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login-layout .layout-login-centered-boxed__form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-layout .login-logo {
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.form-group .form-control {
+  height: 50px;
+  font-size: 16px;
+}
+
+.form-group .is-invalid {
+  background-position: center right !important;
+}
+/*# sourceMappingURL=custom.css.map */
