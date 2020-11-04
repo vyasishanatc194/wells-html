@@ -6,6 +6,9 @@
   padding: 8px 60px !important;
 }
 
+// silder
+
+
 .sidebar-none  {
     display: none !important;
 }
@@ -13,6 +16,15 @@
 .drawer-none  {
     width: 0 !important;
 }
+
+.mdk-drawer-layout__content{
+    transform: none !important;
+}
+
+.mdk-drawer{
+    display: none !important;
+}
+// end
 
 .login-layout{
 
@@ -41,5 +53,38 @@
 
     .is-invalid {
         background-position: center right !important;
+    }
+}
+
+// view your client
+.form-client-view {
+    .form-control {
+        height: 40px;
+        box-shadow: none;
+    }
+
+    .select2-selection__arrow {
+        display: block;
+    }
+
+    .select2-selection__arrow {
+        padding-right: 30px !important;
+    }
+    
+    .select2-selection__arrow:after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-top: 5px solid #333;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+
+    .form-control{
+        &::-webkit-file-upload-button{
+            display: none !important;
+        }
     }
 }

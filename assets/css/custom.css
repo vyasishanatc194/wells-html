@@ -14,6 +14,15 @@
   width: 0 !important;
 }
 
+.mdk-drawer-layout__content {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.mdk-drawer {
+  display: none !important;
+}
+
 .login-layout .box-none {
   background-color: transparent;
   border: 0;
@@ -40,5 +49,35 @@
 
 .form-group .is-invalid {
   background-position: center right !important;
+}
+
+.form-client-view .form-control {
+  height: 40px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-client-view .select2-selection__arrow {
+  display: block;
+}
+
+.form-client-view .select2-selection__arrow {
+  padding-right: 30px !important;
+}
+
+.form-client-view .select2-selection__arrow:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-top: 5px solid #333;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.form-client-view .form-control::-webkit-file-upload-button {
+  display: none !important;
 }
 /*# sourceMappingURL=custom.css.map */
