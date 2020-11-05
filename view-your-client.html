@@ -363,9 +363,16 @@
                      
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+                                <!-- payment modal -->
+                                <div class="modal-btn">
+                                    <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#modal-payment-history">$</a>
+                                </div>
+                            </div>
 
-                                    <table class="table mb-0 thead-border-top-0">
+                            <div class="col-lg-12 mt-5">
+                                <div class="table-responsive border-bottom" >
+
+                                    <table class="table table-clinet mb-0 thead-border-top-0">
                                         <thead>
                                             <tr>
 
@@ -377,12 +384,21 @@
                                                 <th style="">Remarks</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="list" id="">
+                                        <tbody >
 
                                             <tr>
-                                                <td><span class="">Michael Smith</span></td>
-                                                <td><span class="">ADMIN</span></td>
-                                                <td><small class="">3 days ago</small></td>
+                                                <td>Michael Smith</td>
+                                                <td>Service </td>
+                                                <td>3 days ago</td>
+                                                <td>&dollar;12,402</td>
+                                                <td>&dollar;12,402</td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Michael Smith</td>
+                                                <td>Service </td>
+                                                <td>3 days ago</td>
                                                 <td>&dollar;12,402</td>
                                                 <td>&dollar;12,402</td>
                                                 <td></td>
@@ -746,7 +762,6 @@
 
                                     <small class="text-muted d-flex align-items-center"><i class="material-icons icon-16pt mr-1">location_on</i> 16845 Hicks Road</small>
 
-
                                 </div>
                                 <div class="avatar-group mt-2">
 
@@ -882,6 +897,124 @@
 
     <!-- App Settings FAB -->
 
+    
+    <div id="modal-payment-history" class="modal fade moda-custom" tabindex="-1" role="dialog" aria-labelledby="modal-standard-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-standard-title">Payment history</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> <!-- // END .modal-header -->
+                <div class="modal-body pad-0">
+                   <div class="row">
+                    <div class="col-lg-12 ">
+                        <!-- <div class="table-responsive border-bottom" >
+
+                            <table class="table table-clinet mb-0 thead-border-top-0">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th style="">$$$</th>
+                                        <th style="">SA Number</th>
+                                        <th style="">Payment Mode</th>
+                                        <th style="">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+
+                                    <tr>
+                                        <td>12-05-2020</td>
+                                        <td>$$</td>
+                                        <td>0123456</td>
+                                        <td>Cash</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>
+
+                                    <tr>
+                                        <td>16-05-2020</td>
+                                        <td>$$</td>
+                                        <td>0123456</td>
+                                        <td>Mobile payment</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>
+
+                                    <tr>
+                                        <td>16-05-2020</td>
+                                        <td>$$</td>
+                                        <td>0123456</td>
+                                        <td>Check</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>
+
+                                    
+                                    
+                                   
+                                </tbody>
+                            </table>
+                        </div> -->
+
+                        <div id="users" class="table-responsive border-bottom">
+                            <table class="table table-clinet mb-0 thead-border-top-0" >
+                                <thead class="bg-white">
+                                    <tr>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="date">Date</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="amount">$$$</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="sa" >SA Number</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="payment">Payment Mode</a></th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="list">
+                                    <tr>
+                                        <td class="date">12-05-2020</td>
+                                        <td class="amount">$$</td>
+                                        <td class="sa">0123455</td>
+                                        <td class="payment">Cash</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">16-05-2020</td>
+                                        <td class="amount">$$</td>
+                                        <td class="sa">0123456</td>
+                                        <td class="payment">Cash</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">16-05-2020</td>
+                                        <td class="amount">$$</td>
+                                        <td class="sa">0123456</td>
+                                        <td class="payment">Cash</td>
+                                        <td>&dollar;12,402</td>
+                                   
+                                    </tr>    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    
+                            
+                    </div>
+                   </div>
+                   
+
+                </div> <!-- // END .modal-body -->
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-primary">Submit New Payment</button>
+                </div> <!-- // END .modal-footer -->
+            </div> <!-- // END .modal-content -->
+        </div> <!-- // END .modal-dialog -->
+    </div> <!-- // END .modal -->
+
 
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
@@ -927,14 +1060,27 @@
 
     <!-- select -->
 
+    <script src="assets/vendor/list.min.js"></script>
+    <script src="assets/js/list.js"></script>
+
     <script>
         $(document).ready(function(){
             $('.select').select2({
                 placeholder: 'Choose one',
                 minimumResultsForSearch: '-1'
             });
+
+            var options = {
+            valueNames: [ 'date', 'sa' ,'amount', 'payment' ]
+            };
+
+            var userList = new List('users', options);
+                    
         });
+        
     </script>
+    
+    
 
 </body>
 

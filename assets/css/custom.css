@@ -80,4 +80,83 @@
 .form-client-view .form-control::-webkit-file-upload-button {
   display: none !important;
 }
+
+.table-clinet thead th {
+  padding: 15px 15px !important;
+  border: 1px solid #efefef !important;
+  text-align: center;
+}
+
+.table-clinet tbody td {
+  border: 1px solid #efefef !important;
+  border-top: 0px solid #efefef !important;
+  border-bottom: 0px solid #efefef !important;
+  text-align: center;
+}
+
+.table-clinet tbody tr:last-child td {
+  border-bottom: 1px solid #efefef !important;
+}
+
+.modal-btn {
+  position: absolute;
+  right: -40px;
+  top: 50px;
+}
+
+.btn.btn-round {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: #fc934c;
+  color: #aa541a;
+  border: 3px solid #ed7524;
+  position: relative;
+}
+
+.btn.btn-round::after {
+  content: '';
+  height: 46px;
+  width: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: -6px;
+  top: -6px;
+  background-color: #fcd249;
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.btn.btn-round:hover {
+  background-color: #fc934c !important;
+  color: #aa541a !important;
+  border: 3px solid #ed7524 !important;
+}
+
+.moda-custom .modal-dialog {
+  max-width: 700px !important;
+}
+
+.moda-custom .modal-dialog .pad-0 {
+  padding: 0;
+}
 /*# sourceMappingURL=custom.css.map */
