@@ -6,21 +6,9 @@
   padding: 8px 60px !important;
 }
 
-.sidebar-none {
-  display: none !important;
-}
-
-.drawer-none {
-  width: 0 !important;
-}
-
-.mdk-drawer-layout__content {
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-
-.mdk-drawer {
-  display: none !important;
+.menu-toggle a {
+  color: #fff;
+  font-size: 24px;
 }
 
 .login-layout .box-none {

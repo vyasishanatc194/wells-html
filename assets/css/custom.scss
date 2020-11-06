@@ -8,22 +8,28 @@
 
 // silder
 
-
-.sidebar-none  {
-    display: none !important;
+.menu-toggle{
+    a {
+        color: #fff;
+        font-size: 24px;
+    }
 }
 
-.drawer-none  {
-    width: 0 !important;
-}
+// .sidebar-none  {
+//     display: none !important;
+// }
 
-.mdk-drawer-layout__content{
-    transform: none !important;
-}
+// .drawer-none  {
+//     width: 0 !important;
+// }
 
-.mdk-drawer{
-    display: none !important;
-}
+// .mdk-drawer-layout__content{
+//     transform: none !important;
+// }
+
+// .mdk-drawer{
+//     display: none !important;
+// }
 // end
 
 .login-layout{
