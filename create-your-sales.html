@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sales View</title>
+    <title>Create Your sales</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -29,12 +29,26 @@
     <link type="text/css" href="assets/css/vendor-ion-rangeslider.css" rel="stylesheet">
     <link type="text/css" href="assets/css/vendor-ion-rangeslider.rtl.css" rel="stylesheet">
 
+    <!-- Select2 -->
+    <link type="text/css" href="assets/css/vendor-select2.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-select2.rtl.css" rel="stylesheet">
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+
     <link type="text/css" href="assets/css/custom.css" rel="stylesheet">
 
 
 </head>
 
 <body class="layout-default">
+
+
+
+
+
+
+
+
+
 
 
     <div class="preloader"></div>
@@ -258,33 +272,90 @@
 
                     <div class="container-fluid page__container">
 
-                        <div class="card">
-                            <div class="card-header card-header-large bg-white ">
-                                <h4 class="card-header__title">Total Sales Value</h4>
+                        <div class="form-client-view sales-view">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Company</label>
+                                        <select id="" class="select form-control">
+                                            <option></option>
+                                            <option >Wells</option>
+                                            <option>Liveinpure</option>
+                                            <option>hozui</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="select01">SA. No</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="select01">SA. Date</label>
+                                        <div class="input-group input-group-merge">
+                                            <input type="text" class="form-control form-control-prepended" required="" placeholder="Input group prepended"  data-toggle="flatpickr" value="today">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span class="material-icons">today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Client Company</label>
+                                        <input type="text" class="form-control" placeholder="Client company">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Address</label>
+                                        <input type="text" class="form-control" placeholder="Address">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Insert Image Here</label>
+                                        <input type="file" class="form-control" placeholder="Address">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Lead Source</label>
+                                        <select class="select form-control">
+                                            <option></option>
+                                            <option >Wells</option>
+                                            <option>Liveinpure</option>
+                                            <option>hozui</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="">Share Comm</label>
+                                        <input type="text" class="form-control" placeholder="Input amount">
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div class="card-body">
-                               
-                                <div class="chart">
-                                    <canvas id="ordersChart" class="chart-canvas"></canvas>
+
+                            <div class="row mt-auto">
+                                <div class="col-lg-12 text-right">
+                                    <a href="#" class="btn btn-primary btn-submit">Submit</a>
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="card">
-                            <div class="card-header card-header-large bg-white">
-                                <h4 class="card-header__title">Total Sales Closed</h4>
-                            </div>
-                            <div class="card-body">
-                               
-
-                                <div class="chart">
-                                    <canvas id="performanceChart" class="chart-canvas"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        
                        
                     </div>
 
@@ -309,7 +380,7 @@
                            
                         </a>
                         <div class="menu-toggle">
-                            <a href="#!" class="open-menu">
+                            <a href="#">
                                 <i class="fa fa-bars
                                 "></i>
                             </a>
@@ -582,17 +653,31 @@
     <!-- Chart.js Samples -->
     <script src="assets/js/page.ui-charts.js"></script>
 
+
+    <script src="assets/vendor/list.min.js"></script>
+    <script src="assets/js/list.js"></script>
+
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
+
     <script>
         $(document).ready(function(){
-            $('.open-menau').click(function(){
-                // $('.layout-default').toggleClass('has-drawer-opened');
-              
+         
+            $('.select').select2({
+                placeholder: 'Choose one',
+                minimumResultsForSearch: '-1'
             });
+            
+            var options = {
+            valueNames: [ 'sa', 'name' ,'number','product', 'sales-amount' ]
+            };
+
+            var userList = new List('users', options);
+                    
         });
-
-
+        
     </script>
-    
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sales View</title>
+    <title>View Your sales</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -35,6 +35,15 @@
 </head>
 
 <body class="layout-default">
+
+
+
+
+
+
+
+
+
 
 
     <div class="preloader"></div>
@@ -258,33 +267,100 @@
 
                     <div class="container-fluid page__container">
 
-                        <div class="card">
-                            <div class="card-header card-header-large bg-white ">
-                                <h4 class="card-header__title">Total Sales Value</h4>
-                            </div>
-                            <div class="card-body">
+                       <div class="serach-from-section">
+                        <div class="row">
+                            <div class="col-lg-4">
+
+                                <div class="form-group">
+                                    <label for="">customer's name</label>
+                                    <div class="input-group input-group-merge">
+                                        <input id="" type="text" required="" class="form-control form-control-appended" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <a href="#" class="text-link">
+                                                    <span class="fa fa-search"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                
-                                <div class="chart">
-                                    <canvas id="ordersChart" class="chart-canvas"></canvas>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="">Contact Number</label>
+                                    <div class="input-group input-group-merge">
+                                        <input id="" type="text" required="" class="form-control form-control-appended" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <a href="#" class="text-link">
+                                                    <span class="fa fa-search"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-
-                        <div class="card">
-                            <div class="card-header card-header-large bg-white">
-                                <h4 class="card-header__title">Total Sales Closed</h4>
-                            </div>
-                            <div class="card-body">
-                               
-
-                                <div class="chart">
-                                    <canvas id="performanceChart" class="chart-canvas"></canvas>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label for="">Address / Unit No</label>
+                                    <div class="input-group input-group-merge">
+                                        <input id="" type="text" required="" class="form-control form-control-appended" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <a href="#" class="text-link">
+                                                    <span class="fa fa-search"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+                       </div>
+
+                       <div class="view-slaes-table-section">
+                        <div id="users" class="table-responsive border-bottom">
+                            <table class="table table-view-sales mb-0 thead-border-top-0" >
+                                <thead class="bg-white">
+                                    <tr>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="sa">SA NO</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="name">Name</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="number" >Contact Number</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="product">Product</a></th>
+                                        <th><a href="javascript:void(0)" class="sort" data-sort="sales-amount">Amount</a></th>
+                                        <th>Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="list bg-white">
+                                    <tr>
+                                        <td class="sa"><a href="tel:" class="text-link">1000020</a></td>
+                                        <td class="name">Jhon</td>
+                                        <td class="number"><a href="tel:" class="text-link">998855566</a></td>
+                                        <td class="product">product1</td>
+                                        <td class="sales-amount">&dollar;12,402</td>
+                                        <td> 101, Lorem ipsum</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="sa"><a href="tel:" class="text-link">1000021</a></td>
+                                        <td class="name">Biden</td>
+                                        <td class="number"><a href="tel:" class="text-link">777855566</a></td>
+                                        <td class="product">product2</td>
+                                        <td class="sales-amount">&dollar;10,002</td>
+                                        <td> 102, Lorem ipsum</td>
+                                    </tr>
+
                        
-                        
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+
+                       
                        
                     </div>
 
@@ -309,7 +385,7 @@
                            
                         </a>
                         <div class="menu-toggle">
-                            <a href="#!" class="open-menu">
+                            <a href="#">
                                 <i class="fa fa-bars
                                 "></i>
                             </a>
@@ -582,17 +658,24 @@
     <!-- Chart.js Samples -->
     <script src="assets/js/page.ui-charts.js"></script>
 
+
+    <script src="assets/vendor/list.min.js"></script>
+    <script src="assets/js/list.js"></script>
+
+
     <script>
         $(document).ready(function(){
-            $('.open-menau').click(function(){
-                // $('.layout-default').toggleClass('has-drawer-opened');
-              
-            });
+         
+            var options = {
+            valueNames: [ 'sa', 'name' ,'number','product', 'sales-amount' ]
+            };
+
+            var userList = new List('users', options);
+                    
         });
-
-
+        
     </script>
-    
+
 </body>
 
 </html>
