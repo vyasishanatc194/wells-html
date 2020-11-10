@@ -6,6 +6,10 @@
   padding: 8px 60px !important;
 }
 
+.btn.btn-lg {
+  padding: 10px 30px;
+}
+
 .menu-toggle a {
   color: #fff;
   font-size: 24px;
@@ -188,5 +192,18 @@
 
 .moda-custom .modal-dialog .pad-0 {
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .btn.btn-lg {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .div-complete.text-right {
+    text-align: center !important;
+  }
+  .div-complete.text-right .btn-lg {
+    width: auto;
+  }
 }
 /*# sourceMappingURL=custom.css.map */
