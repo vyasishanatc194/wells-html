@@ -74,7 +74,7 @@
 
                                 <!-- Navbar Brand -->
                                 <a href="index.html" class="navbar-brand flex ">
-                                    <span>Dashboard</span>
+                                    <span>Task complete</span>
                                 </a>
 
 
@@ -337,7 +337,7 @@
                             <div class="row mt-auto">
                                 <div class="col-lg-12 text-right div-complete">
                                 
-                                    <a href="#" class="btn btn-outline-primary btn-lg">Complete</a>
+                                    <a href="#" class="btn btn-primary btn-lg">Complete</a>
 
                                 </div>
                             </div>
@@ -366,21 +366,21 @@
                            
                         </a>
                         <div class="menu-toggle">
-                            <a href="#">
+                            <a href="#" class="open-menu">
                                 <i class="fa fa-bars
                                 "></i>
                             </a>
-                        </div>
+                        </div> 
                      
                     </div>
                    
 
                    <div class="">
                     <ul class="sidebar-menu flex">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="index.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">View Your task</span>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="installer-view-your-task-complete.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">assignment</i>
+                                <span class="sidebar-menu-text">View Your task complete</span>
                             </a>
                         </li>
 
@@ -650,6 +650,21 @@
 
             var userList = new List('users', options);
                     
+        });
+
+        document.querySelector('.open-menu').addEventListener('click', function() {
+            document.querySelector('.mdk-drawer').mdkDrawer.toggle();
+        })
+
+        $(document).ready(function(){
+            $('.open-menu').click(function(){
+                $('.navbar-toggler').addClass('open');
+                $('mdk-drawer').hide();
+            });
+
+            $('.navbar-toggler').click(function(){
+                $('.navbar-toggler').removeClass('open');
+            });
         });
         
     </script>

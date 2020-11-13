@@ -3,16 +3,75 @@
 }
 
 .btn-pad-60 {
-  padding: 8px 60px !important;
+    padding: 8px 60px !important;
 }
-
 
 .btn.btn-lg {
     padding: 10px 30px;
 }
+
+.btn.btn-primary {
+    background-color: #004c74 !important;
+    border-color: rgb(0, 76, 116) !important;
+    transition: all 0.3s;
+
+    &:hover {
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+    }
+}
+
+.btn.btn-outline-primary {
+    color: #004c74 !important;
+    border-color: rgb(0, 76, 116) !important;
+    transition: all 0.3s;
+
+    &:hover {
+        transition: all 0.3s;
+        background-color: #004c74 !important;
+        color: #fff !important;
+        box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+    }
+}
+
 // silder
 
-.menu-toggle{
+.navbar-toggler {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-sm .navbar-toggler {
+        display: none !important;
+    }
+
+    .navbar-expand-sm .navbar-toggler.open {
+        display: flex !important;
+    }
+
+    .side-bar-none {
+        .layout-default.has-drawer-opened {
+            .mdk-drawer-layout__content {
+                transform: translate3d(0px, 0px, 0px) !important;
+            }
+        }
+
+        .mdk-drawer-layout__content {
+            transform: none !important;
+        }
+
+        .mdk-drawer {
+            display: none;
+        }
+    }
+}
+
+.navbar-toggler.navbar-toggler-company {
+    display: flex !important;
+}
+
+.menu-toggle {
     a {
         color: #fff;
         font-size: 24px;
@@ -36,19 +95,19 @@
 // }
 // end
 
-.login-layout{
-
+.login-layout {
     .box-none {
         background-color: transparent;
         border: 0;
         box-shadow: none;
     }
 
-    .layout-login-centered-boxed__form{
+    .layout-login-centered-boxed__form {
         margin-left: auto;
         margin-right: auto;
     }
-    .login-logo{
+    
+    .login-logo {
         width: 200px;
         object-fit: cover;
         margin-bottom: 40px;
@@ -58,7 +117,7 @@
 .form-group {
     .form-control {
         height: 50px;
-        font-size: 16px;   
+        font-size: 16px;
     }
 
     .is-invalid {
@@ -80,7 +139,7 @@
     .select2-selection__arrow {
         padding-right: 30px !important;
     }
-    
+
     .select2-selection__arrow:after {
         content: "";
         position: absolute;
@@ -92,14 +151,14 @@
         border-right: 5px solid transparent;
     }
 
-    .form-control{
-        &::-webkit-file-upload-button{
+    .form-control {
+        &::-webkit-file-upload-button {
             display: none !important;
         }
     }
 }
 
-.sales-view{
+.sales-view {
     min-height: calc(100vh - 150px);
     height: 100%;
     display: flex;
@@ -109,7 +168,7 @@
 
 .btn-submit {
     background-color: #3f51b5 !important;
-    border-color:  #3f51b5 !important;
+    border-color: #3f51b5 !important;
 }
 
 .table-clinet thead th {
@@ -135,6 +194,7 @@
     padding: 15px 15px !important;
     border: 1px solid #efefef !important;
     text-align: center;
+    white-space: nowrap;
 }
 
 .table-view-sales tbody td {
@@ -142,6 +202,7 @@
     border-top: 0px solid #efefef !important;
     border-bottom: 1px solid #efefef !important;
     text-align: center;
+    white-space: nowrap;
 }
 
 .table-view-sales tbody tr:last-child td {
@@ -152,8 +213,7 @@
     color: #4a4a4a !important;
 }
 
-
-.modal-btn{
+.modal-btn {
     position: absolute;
     right: -40px;
     top: 50px;
@@ -168,13 +228,13 @@
     justify-content: center;
     font-size: 16px;
     line-height: 28px;
-    background-color: #fc934c;
-    color: #aa541a;
-    border: 3px solid #ed7524;
+    background-color: #fc934c !important;
+    color: #aa541a !important;
+    border: 3px solid #ed7524 !important;
     position: relative;
 
     &::after {
-        content: '';
+        content: "";
         height: 46px;
         width: 46px;
         display: flex;
@@ -186,7 +246,6 @@
         border-radius: 100%;
         position: absolute;
         z-index: -1;
-       
     }
 
     &:hover {
@@ -196,17 +255,15 @@
     }
 }
 
-
 .moda-custom {
     .modal-dialog {
         max-width: 700px !important;
 
-        .pad-0{
+        .pad-0 {
             padding: 0;
         }
     }
 }
-
 
 @media (max-width: 767px) {
     .btn.btn-lg {

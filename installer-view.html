@@ -59,7 +59,7 @@
 
                                 <!-- Navbar Brand -->
                                 <a href="index.html" class="navbar-brand flex ">
-                                    <span>Dashboard</span>
+                                    <span>Installer view</span>
                                 </a>
 
 
@@ -281,7 +281,7 @@
                                         <td class="payment">&dollar;12,402</td>
                                         <td class="address"> 101, Lorem ipsum</td>
                                         <td class="name">jhon</td>
-                                        <td class="">9898223355</td>
+                                        <td class=""><a href="installer-view-your-task.html">See more</a></td>
                                     </tr>
 
                                     <tr>
@@ -337,21 +337,21 @@
                            
                         </a>
                         <div class="menu-toggle">
-                            <a href="#">
+                            <a href="#" class="open-menu">
                                 <i class="fa fa-bars
                                 "></i>
                             </a>
-                        </div>
+                        </div> 
                      
                     </div>
                    
 
                    <div class="">
                     <ul class="sidebar-menu flex">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="index.html">
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button" href="installer-view.html">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">View Your Task</span>
+                                <span class="sidebar-menu-text">Installer view</span>
                             </a>
                         </li>
                     </ul>
@@ -588,6 +588,22 @@
 
             var userList = new List('users', options);
                     
+        });
+
+
+        document.querySelector('.open-menu').addEventListener('click', function() {
+            document.querySelector('.mdk-drawer').mdkDrawer.toggle();
+        })
+
+        $(document).ready(function(){
+            $('.open-menu').click(function(){
+                $('.navbar-toggler').addClass('open');
+                $('mdk-drawer').hide();
+            });
+
+            $('.navbar-toggler').click(function(){
+                $('.navbar-toggler').removeClass('open');
+            });
         });
         
     </script>

@@ -38,7 +38,7 @@
     <link type="text/css" href="assets/css/custom.css" rel="stylesheet">
 </head>
 
-<body class="layout-default">
+<body class="layout-default side-bar-none">
 
 
 
@@ -67,13 +67,13 @@
                             <div class="container-fluid p-0">
 
                                 <!-- Navbar toggler -->
-                                <button class="navbar-toggler navbar-toggler-custom d-lg-none d-flex mr-navbar" type="button" data-toggle="sidebar">
-                                    <span class="material-icons">short_text</span>
+                                <button class="navbar-toggler navbar-toggler-custom d-lg-none  d-flex mr-navbar" type="button" data-toggle="sidebar">
+                                    <span class="material-icons">menu</span>
                                 </button>
 
                                 <!-- Navbar Brand -->
                                 <a href="index.html" class="navbar-brand flex ">
-                                    <span>Edit Account</span>
+                                    <span>Edit account</span>
                                 </a>
 
 
@@ -378,6 +378,9 @@
         <!-- // END drawer-layout__content -->
 
         <div class="mdk-drawer  js-mdk-drawer" id="default-drawer" data-align="start">
+         
+           
+
             <div class="mdk-drawer__content">
                 <div class="sidebar sidebar-dark sidebar-left simplebar" data-simplebar>
                     <div class="d-flex align-items-center sidebar-p-a border-bottom sidebar-account flex-shrink-0">
@@ -392,7 +395,7 @@
                                 <i class="fa fa-bars
                                 "></i>
                             </a>
-                        </div>
+                        </div> 
                      
                     </div>
                    
@@ -401,42 +404,12 @@
                     <ul class="sidebar-menu flex">
                         <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button" href="index.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">View Your sales</span>
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person</i>
+                                <span class="sidebar-menu-text">Edit account</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="index.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">Create New Sales</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#pages_menu">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
-                                <span class="sidebar-menu-text">Pages</span>
-                                <!-- <span class="badge badge-warning rounded-circle badge-notifications ml-auto" style="padding: .1875rem .375rem;">8</span>
-                                <span class="sidebar-menu-toggle-icon"></span> -->
-                            </a>
-                            <ul class="sidebar-submenu collapse" id="pages_menu">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="edit-account.html">
-                                        <span class="sidebar-menu-text">Edit Account</span>
-                                    </a>
-                                </li>
-                              
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="blog.html">
-                                        <span class="sidebar-menu-text">Blog</span>
-                                    </a>
-                                </li>
-                              
-                               
-                            </ul>
-                        </li>
-                   
+                       
                     </ul>
                    </div>
 
@@ -647,6 +620,23 @@
     <!-- Dropzone -->
     <script src="assets/vendor/dropzone.min.js"></script>
     <script src="assets/js/dropzone.js"></script>
+
+    <script>
+        document.querySelector('.open-menu').addEventListener('click', function() {
+            document.querySelector('.mdk-drawer').mdkDrawer.toggle();
+        })
+
+        $(document).ready(function(){
+            $('.open-menu').click(function(){
+                $('.navbar-toggler').addClass('open');
+            });
+
+            $('.navbar-toggler').click(function(){
+                $('.navbar-toggler').removeClass('open');
+            });
+        });
+
+    </script>
 
 </body>
 

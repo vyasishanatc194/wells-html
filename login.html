@@ -60,7 +60,7 @@
 
     
 
-            <form action="index.html" novalidate>
+            <form action="create-your-sales.html" novalidate>
                 <div class="form-group">
                     <label class="text-label" for="email_2">Username:</label>
                         <input id="email_2" type="email" required="" class="form-control form-control-prepended" placeholder="john@doe.com">
@@ -72,7 +72,7 @@
                         <input id="password_2" type="password" required="" class="form-control form-control-appended" placeholder="Enter your password">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <a href="#">
+                                <a href="#" class="text-link">
                                     <span class="fa fa-eye"></span>
                                 </a>
                             </div>
@@ -119,7 +119,22 @@
     <script src="assets/js/app-settings.js"></script>
 
 
+    <script>
+         document.querySelector('.open-menu').addEventListener('click', function() {
+            document.querySelector('.mdk-drawer').mdkDrawer.toggle();
+        })
 
+        $(document).ready(function(){
+            $('.open-menu').click(function(){
+                $('.navbar-toggler').addClass('open');
+                $('mdk-drawer').hide();
+            });
+
+            $('.navbar-toggler').click(function(){
+                $('.navbar-toggler').removeClass('open');
+            });
+        });
+    </script>
 
 
 </body>

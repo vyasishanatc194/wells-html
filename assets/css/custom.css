@@ -10,6 +10,70 @@
   padding: 10px 30px;
 }
 
+.btn.btn-primary {
+  background-color: #004c74 !important;
+  border-color: #004c74 !important;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn.btn-primary:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+          box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+}
+
+.btn.btn-outline-primary {
+  color: #004c74 !important;
+  border-color: #004c74 !important;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn.btn-outline-primary:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #004c74 !important;
+  color: #fff !important;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+          box-shadow: 0 5px 15px 0 rgba(0, 76, 116, 0.4) !important;
+}
+
+.navbar-toggler {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-sm .navbar-toggler {
+    display: none !important;
+  }
+  .navbar-expand-sm .navbar-toggler.open {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .side-bar-none .layout-default.has-drawer-opened .mdk-drawer-layout__content {
+    -webkit-transform: translate3d(0px, 0px, 0px) !important;
+            transform: translate3d(0px, 0px, 0px) !important;
+  }
+  .side-bar-none .mdk-drawer-layout__content {
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .side-bar-none .mdk-drawer {
+    display: none;
+  }
+}
+
+.navbar-toggler.navbar-toggler-company {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .menu-toggle a {
   color: #fff;
   font-size: 24px;
@@ -115,6 +179,7 @@
   padding: 15px 15px !important;
   border: 1px solid #efefef !important;
   text-align: center;
+  white-space: nowrap;
 }
 
 .table-view-sales tbody td {
@@ -122,6 +187,7 @@
   border-top: 0px solid #efefef !important;
   border-bottom: 1px solid #efefef !important;
   text-align: center;
+  white-space: nowrap;
 }
 
 .table-view-sales tbody tr:last-child td {
@@ -153,9 +219,9 @@
           justify-content: center;
   font-size: 16px;
   line-height: 28px;
-  background-color: #fc934c;
-  color: #aa541a;
-  border: 3px solid #ed7524;
+  background-color: #fc934c !important;
+  color: #aa541a !important;
+  border: 3px solid #ed7524 !important;
   position: relative;
 }
 

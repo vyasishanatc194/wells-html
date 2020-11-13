@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>View Your Client</title>
+    <title>Super admin</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -29,36 +29,17 @@
     <link type="text/css" href="assets/css/vendor-ion-rangeslider.css" rel="stylesheet">
     <link type="text/css" href="assets/css/vendor-ion-rangeslider.rtl.css" rel="stylesheet">
 
-
-    <!-- Dropzone -->
-    <link type="text/css" href="assets/css/vendor-dropzone.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/vendor-dropzone.rtl.css" rel="stylesheet">
-
-    <!-- Select2 -->
+        <!-- Select2 -->
     <link type="text/css" href="assets/css/vendor-select2.css" rel="stylesheet">
     <link type="text/css" href="assets/css/vendor-select2.rtl.css" rel="stylesheet">
     <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 
-    <!-- Flatpickr -->
-    <link type="text/css" href="assets/css/vendor-flatpickr.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/vendor-flatpickr.rtl.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.rtl.css" rel="stylesheet">
-
-
     <link type="text/css" href="assets/css/custom.css" rel="stylesheet">
+
+
 </head>
 
-<body class="layout-default side-bar-none">
-
-
-
-
-
-
-
-
-
+<body class="layout-default">
 
 
     <div class="preloader"></div>
@@ -84,7 +65,7 @@
 
                                 <!-- Navbar Brand -->
                                 <a href="index.html" class="navbar-brand flex ">
-                                    <span>View your client</span>
+                                    <span>Commission</span>
                                 </a>
 
 
@@ -279,139 +260,52 @@
                 <!-- Header Layout Content -->
                 <div class="mdk-header-layout__content mdk-header-layout__content--fullbleed mdk-header-layout__content--scrollable page">
 
-
                     <div class="container-fluid page__container">
 
-                        <div class="form-client-view">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Company</label>
-                                        <select id="" class="select form-control">
-                                            <option></option>
-                                            <option >Wells</option>
-                                            <option>Liveinpure</option>
-                                            <option>hozui</option>
-                                        </select>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="select01">SA. No</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
+                        <div class="view-slaes-table-section">
+                            <div id="users" class="table-responsive border-bottom">
+                                <table class="table table-view-sales mb-0 thead-border-top-0" >
+                                    <thead class="bg-white">
+                                        <tr>
+                                            <th><a href="javascript:void(0)" class="sort" data-sort="sa">SA Number</a></th>
+                                            <th><a href="javascript:void(0)" class="sort" data-sort="name">Name</a></th>
+                                            <th><a href="javascript:void(0)" class="sort" data-sort="commission">Commission Paid</a></th>
+                                            <th><a href="javascript:void(0)" class="sort" data-sort="month">Month</a></th>
+                                            <th><a href="javascript:void(0)" class="sort" data-sort="paid">Paid</a></th>
+                                      
+                                          
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list bg-white">
+                                        
+    
+                                        <tr>
+                                            <td class="sa">100212</td>
+                                            <td class="name">product3</td>
+                                            <td class="commission">$2100</td>
+                                            <td class="month">June</td>
+                                            <td class="paid">unpaid</td>                                     
+                                        </tr>
 
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="select01">SA. Date</label>
-                                        <div class="input-group input-group-merge">
-                                            <input type="text" class="form-control form-control-prepended" required="" placeholder="Input group prepended"  data-toggle="flatpickr" value="today">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <span class="material-icons">today</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Client Company</label>
-                                        <input type="text" class="form-control" placeholder="Client company">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Address</label>
-                                        <input type="text" class="form-control" placeholder="Address">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Insert Image Here</label>
-                                        <input type="file" class="form-control" placeholder="Address">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Lead Source</label>
-                                        <select class="select form-control">
-                                            <option></option>
-                                            <option >Wells</option>
-                                            <option>Liveinpure</option>
-                                            <option>hozui</option>
-                                        </select>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label for="">Share Comm</label>
-                                        <input type="text" class="form-control" placeholder="Input amount">
-                                    </div>
-                                </div>
-                                
+                                        <tr>
+                                            <td class="sa">100213</td>
+                                            <td class="name">product2</td>
+                                        
+                                            <td class="commission">$2000</td>
+                                            <td class="month">July</td>
+                                            <td class="paid">paid</td>                                     
+                                        </tr>
+    
+                                        
+    
+                           
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                     
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!-- payment modal -->
-                                <div class="modal-btn">
-                                    <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#modal-payment-history">$</a>
-                                </div>
                             </div>
 
-                            <div class="col-lg-12 mt-5">
-                                <div class="table-responsive border-bottom" >
+                      
 
-                                    <table class="table table-clinet mb-0 thead-border-top-0">
-                                        <thead>
-                                            <tr>
-
-                                                <th>Date</th>
-                                                <th style="">Type of service</th>
-                                                <th style="">Installer</th>
-                                                <th style="">Payment Received</th>
-                                                <th style="">Mode of Payment</th>
-                                                <th style="">Remarks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody >
-
-                                            <tr>
-                                                <td>Michael Smith</td>
-                                                <td>Service </td>
-                                                <td>3 days ago</td>
-                                                <td>&dollar;12,402</td>
-                                                <td>&dollar;12,402</td>
-                                                <td></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Michael Smith</td>
-                                                <td>Service </td>
-                                                <td>3 days ago</td>
-                                                <td>&dollar;12,402</td>
-                                                <td>&dollar;12,402</td>
-                                                <td></td>
-                                            </tr>
-                                            
-                                           
-                                        </tbody>
-                                    </table>
-                                </div>
-                                    
-                            </div>
-                        </div>
-                       
                     </div>
 
 
@@ -435,9 +329,8 @@
                            
                         </a>
                         <div class="menu-toggle">
-                            <a href="#">
-                                <i class="fa fa-bars
-                                "></i>
+                            <a href="#!" class="open-menu">
+                                <i class="fa fa-bars"></i>
                             </a>
                         </div>
                      
@@ -446,43 +339,50 @@
 
                    <div class="">
                     <ul class="sidebar-menu flex">
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="index.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">View Your sales</span>
-                            </a>
-                        </li>
+                        <ul class="sidebar-menu flex">
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="super-admin-create-account.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">person_add</i>
+                                    <span class="sidebar-menu-text">Create new account</span>
+                                </a>
+                            </li>
+    
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="super-admin-complete-file.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">view_list</i>
+                                    <span class="sidebar-menu-text">View completed files</span>
+                                </a>
+                            </li>
+    
+                            <li class="sidebar-menu-item active">
+                                <a class="sidebar-menu-button" href="super-admin-commossion.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">attach_money</i>
+                                    <span class="sidebar-menu-text">Commission</span>
+                                </a>
+                            </li>
+    
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button" href="super-admi-payment-history.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">history</i>
+                                    <span class="sidebar-menu-text">Payment history</span>
+                                </a>
+                            </li>
+    
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button" href="super-admi-new-sales-entry.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">view_compact</i>
+                                    <span class="sidebar-menu-text">View new entry</span>
+                                </a>
+                            </li>
+    
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button" href="super-admin-all-files.html">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
+                                    <span class="sidebar-menu-text">View all files</span>
+                                </a>
+                            </li>
 
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="index.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
-                                <span class="sidebar-menu-text">Create New Sales</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#pages_menu">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">description</i>
-                                <span class="sidebar-menu-text">Pages</span>
-                                <!-- <span class="badge badge-warning rounded-circle badge-notifications ml-auto" style="padding: .1875rem .375rem;">8</span>
-                                <span class="sidebar-menu-toggle-icon"></span> -->
-                            </a>
-                            <ul class="sidebar-submenu collapse" id="pages_menu">
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="edit-account.html">
-                                        <span class="sidebar-menu-text">Edit Account</span>
-                                    </a>
-                                </li>
-                              
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="blog.html">
-                                        <span class="sidebar-menu-text">Blog</span>
-                                    </a>
-                                </li>
-                              
-                               
-                            </ul>
-                        </li>
+                
 
                
                    
@@ -496,7 +396,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- // END drawer-layout -->
 
@@ -524,6 +423,7 @@
                                     <a href="#" class="text-body"><strong class="text-15pt">Marketing Team Meeting</strong></a>
 
                                     <small class="text-muted d-flex align-items-center"><i class="material-icons icon-16pt mr-1">location_on</i> 16845 Hicks Road</small>
+
 
                                 </div>
                                 <div class="avatar-group mt-2">
@@ -658,83 +558,10 @@
         </div>
     </div>
 
-   <!-- App Settings FAB -->
-   <div id="app-settings" style="display: none;">
+    <!-- App Settings FAB -->
+    <div id="app-settings" style="display: none;">
         <app-settings></app-settings>
     </div>
-
-    
-    <div id="modal-payment-history" class="modal fade moda-custom" tabindex="-1" role="dialog" aria-labelledby="modal-standard-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-standard-title">Payment history</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div> <!-- // END .modal-header -->
-                <div class="modal-body pad-0">
-                   <div class="row">
-                    <div class="col-lg-12 ">
-                       
-                        <div id="users" class="table-responsive border-bottom">
-                            <table class="table table-clinet mb-0 thead-border-top-0" >
-                                <thead class="bg-white">
-                                    <tr>
-                                        <th><a href="javascript:void(0)" class="sort" data-sort="date">Date</a></th>
-                                        <th><a href="javascript:void(0)" class="sort" data-sort="amount">$$$</a></th>
-                                        <th><a href="javascript:void(0)" class="sort" data-sort="sa" >SA Number</a></th>
-                                        <th><a href="javascript:void(0)" class="sort" data-sort="payment">Payment Mode</a></th>
-                                        <th>Balance</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="list">
-                                    <tr>
-                                        <td class="date">12-05-2020</td>
-                                        <td class="amount">$$</td>
-                                        <td class="sa">0123455</td>
-                                        <td class="payment">Cash</td>
-                                        <td>&dollar;12,402</td>
-                                   
-                                    </tr>
-
-                                    <tr>
-                                        <td class="date">16-05-2020</td>
-                                        <td class="amount">$$</td>
-                                        <td class="sa">0123456</td>
-                                        <td class="payment">Cash</td>
-                                        <td>&dollar;12,402</td>
-                                   
-                                    </tr>
-
-                                    <tr>
-                                        <td class="date">16-05-2020</td>
-                                        <td class="amount">$$</td>
-                                        <td class="sa">0123456</td>
-                                        <td class="payment">Cash</td>
-                                        <td>&dollar;12,402</td>
-                                   
-                                    </tr>    
-                                </tbody>
-                            </table>
-                        </div>
-
-                    
-                            
-                    </div>
-                   </div>
-                   
-
-                </div> <!-- // END .modal-body -->
-                <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
-                    <button type="button" class="btn btn-primary">Submit New Payment</button>
-                </div> <!-- // END .modal-footer -->
-            </div> <!-- // END .modal-content -->
-        </div> <!-- // END .modal-dialog -->
-    </div> <!-- // END .modal -->
-
-
 
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
@@ -766,37 +593,51 @@
     <!-- App Settings (safe to remove) -->
     <script src="assets/js/app-settings.js"></script>
 
-    <!-- Dropzone -->
-    <script src="assets/vendor/dropzone.min.js"></script>
-    <script src="assets/js/dropzone.js"></script>
 
-    <!-- Select2 -->
+
+    <!-- Global Settings -->
+    <script src="assets/js/settings.js"></script>
+
+    <!-- Chart.js -->
+    <script src="assets/vendor/Chart.min.js"></script>
+
+    <!-- UI Charts Page JS -->
+    <script src="assets/js/chartjs-rounded-bar.js"></script>
+    <script src="assets/js/charts.js"></script>
+
+    
+
+    <script src="assets/js/page.dashboard.js"></script>
+    
+    <!-- Chart.js Samples -->
+    <script src="assets/js/page.ui-charts.js"></script>
+    
     <script src="assets/vendor/select2/select2.min.js"></script>
     <script src="assets/js/select2.js"></script>
-
-    <!-- Flatpickr -->
-    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
-    <script src="assets/js/flatpickr.js"></script>
-
-    <!-- select -->
 
     <script src="assets/vendor/list.min.js"></script>
     <script src="assets/js/list.js"></script>
 
     <script>
         $(document).ready(function(){
-            $('.select').select2({
-                placeholder: 'Choose one',
+            $('.open-menau').click(function(){
+                // $('.layout-default').toggleClass('has-drawer-opened');
+              
+            });
+
+
+            $('.select-role').select2({
+                placeholder: 'Select the role',
                 minimumResultsForSearch: '-1'
             });
 
             var options = {
-            valueNames: [ 'date', 'sa' ,'amount', 'payment' ]
+            valueNames: [ 'sa', 'name' ,'commission','month', 'paid' ]
             };
 
             var userList = new List('users', options);
-                    
         });
+
 
         document.querySelector('.open-menu').addEventListener('click', function() {
             document.querySelector('.mdk-drawer').mdkDrawer.toggle();
@@ -813,10 +654,9 @@
             });
         });
         
+
     </script>
     
-    
-
 </body>
 
 </html>
