@@ -34,7 +34,52 @@
     }
 }
 
+.rounded-circle {
+    height: 43px;
+    width: 43px;
+    border-radius: 100%;
+    overflow: hidden;
+    
+    img {
+      object-fit: contain;
+    }
+  }
+
 // silder
+
+.search-installer{
+    max-width: 360px !important;
+    width: 100%;
+    margin: 0 30px;
+    background-color: #fff !important;
+    border: 1px solid #efefef !important;
+    .form-control {
+        height: 40px;
+        min-height: 40px;
+        background-color: #fff !important;
+        
+    }
+}
+
+.open-menu{
+    color: #fff;
+
+    &:hover {
+        color: #fff !important;
+    }
+}
+
+.sidebar.bg-dark {
+    background-color: #004c74 !important;
+}
+
+.sidebar-dark .active>.sidebar-menu-button {
+    color: #fff !important;
+}
+
+.sidebar-dark .active>.sidebar-menu-button .sidebar-menu-icon{
+    color: #fff !important;
+}
 
 .navbar-toggler {
     box-shadow: none !important;
@@ -106,7 +151,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .login-logo {
         width: 200px;
         object-fit: cover;
@@ -265,7 +310,46 @@
     }
 }
 
+.mobile-logo {
+    display: none;
+}
+
+@media (max-width: 320px){
+    .search-installer {
+        width: 75px !important;
+        max-width: unset;
+    }
+
+    .navbar-brand {
+        margin-right: 10px !important;
+        max-width: 90px;
+    }
+
+    .navbar-toggler.navbar-toggler-company {
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 767px) {
+
+    .mobile-text{
+        display: none;
+    }
+    .mobile-logo{
+        display: block;
+        img {
+            width: 80px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .search-installer {
+        width: 100px;
+        max-width: unset;
+        margin: 0 5px;
+    }
+
     .btn.btn-lg {
         width: 100%;
         margin-bottom: 15px;
@@ -277,5 +361,14 @@
         .btn-lg {
             width: auto;
         }
+    }
+}
+
+
+@media (min-width: 767px) and (max-width: 1025px) {
+
+    .search-installer {
+        width: 100% !important;
+        max-width: 250px !important;
     }
 }
