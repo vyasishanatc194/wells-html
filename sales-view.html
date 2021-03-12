@@ -105,7 +105,9 @@
                             <div class="card-body">
                                
                                 <div class="chart">
-                                    <canvas id="ordersChart" class="chart-canvas"></canvas>
+                                    <!-- <canvas id="ordersChart" class="chart-canvas"></canvas> -->
+                                    
+                                    <canvas id="barChart" class="chart-canvas"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -387,7 +389,7 @@
     <script src="assets/vendor/Chart.min.js"></script>
 
     <!-- UI Charts Page JS -->
-    <script src="assets/js/chartjs-rounded-bar.js"></script>
+    <!-- <script src="assets/js/chartjs-rounded-bar.js"></script> -->
     <script src="assets/js/charts.js"></script>
 
     <!-- Chart.js Samples -->
@@ -406,6 +408,79 @@
 
             $('.navbar-toggler').click(function(){
                 $('.navbar-toggler').removeClass('open');
+            });
+
+
+            
+            var DEFAULT_DATASET_SIZE = 7,
+                addedCount = 0,
+                color = Chart.helpers.color;
+
+            var months = ["1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug", "8 Aug", "9 Aug", "10 Aug", "11 Aug", "12 Aug"];
+
+            var chartColors = {
+                color1: '#299bff',
+                color2: '#EDF0F2'
+            };
+
+
+            var barData = {
+                labels: ["1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 Aug","4 Aug", "5 Aug", "6 Aug", "7 Aug"],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: color(chartColors.color1).alpha(1).rgbString(),
+                    borderColor: chartColors.color1,
+                    borderWidth: 1,
+                    data: [65, 59, 80, 81, 56, 55, 50,81, 56, 55, 50]
+                }, ]
+
+            };
+            var index = 11;
+            var ctx = document.getElementById("barChart").getContext("2d");
+            var myNewChartB = new Chart(ctx, {
+                type: 'bar',
+                data: barData,
+
+                options: {
+                    responsive: true,
+                    maintainAspectRation: true,
+                    scales: {
+                        xAxes: [{
+                            barPercentage: 0.7,
+                            categoryPercentage: 0.4,        
+                            
+                            gridLines: {
+                                display: false
+                            }
+                        }],
+                        yAxes: [{
+
+                            gridLines: {
+                                drawBorder: false,
+                            },
+                            ticks: {
+                                beginAtZero: true,
+                                userCallback: function(value, index, values) {
+                                    // Convert the number to a string and splite the string every 3 charaters from the end
+                                    value = value.toString();
+                                    value = value.split(/(?=(?:...)*k)/);
+
+                                    // Convert the array to a string and format the output
+                                    value = value.join('.');
+                                    return value + ' K ';
+                                }
+                            }
+                        }]
+                    },
+                    legend: {
+                        position: 'top',
+                        display: false
+                    },
+                    title: {
+                        display: false,
+                        text: 'Bar Chart'
+                    }
+                }
             });
         });
 
